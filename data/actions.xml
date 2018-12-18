@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
 
-    <menuitem name="Pabrik pesawat" id="nursery_root_menu"/>
+    <menuitem name="Pabrik Pesawat" id="nursery_root_menu"/>
+
+    <record model="ir.actions.act_window" id="action_nursery_plant">
+        <field name="name">Pesawat</field>
+        <field name="res_model">nursery.plant</field>
+        <field name="view_mode">tree,form</field>
+    </record>
 
     <record model="ir.actions.act_window" id="action_nursery_customer">
         <field name="name">Pelanggan</field>
@@ -9,7 +15,20 @@
         <field name="view_mode">tree,form</field>
     </record>
 
+    <record model="ir.actions.act_window" id="action_nursery_order">
+        <field name="name">Pesanan</field>
+        <field name="res_model">nursery.order</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Pesawat" id="nursery_plant_menu" parent="nursery_root_menu"
+              sequence="1" action="action_nursery_plant"/>
+
     <menuitem name="Pelanggan" id="nursery_customer_menu" parent="nursery_root_menu"
-              sequence="1" action="action_nursery_customer"/>
+              sequence="2" action="action_nursery_customer"/>
+
+    <menuitem name="Pesanan" id="nursery_order_menu" parent="nursery_root_menu"
+              sequence="3" action="action_nursery_order"/>
+
 
 </odoo>

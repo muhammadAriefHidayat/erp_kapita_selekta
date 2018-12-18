@@ -5,13 +5,14 @@
     'name': 'Pabrik Pesawat',
     'version': '1.0',
     'category': 'Tools',
-    'author':'Arief dan Rahma',
     'summary': 'Manajemen Pesawat dan Pelanggan',
-    'description':'Muhammad Arief Hidayat: 1517051086 '
-                  'Noverina Rahmaniyanti: 1517051096',
+    'author': "My Company",
+    'website': "http://www.yourcompany.com",
     'depends': ['web'],
     'data': [
         'data/actions.xml',
+        'data/plant_views.xml',
+        'data/order_views.xml',
     ],
     'demo': [
     ],
